@@ -1,4 +1,3 @@
-
 import { logoImageUri, founderImageUri } from './images.ts';
 
 export const config = {
@@ -66,6 +65,25 @@ export const config = {
       { target: 150, label: "Projects Delivered" },
       { target: 98, label: "Happy Clients" },
       { target: 8, label: "Years of Creativity" }
+    ]
+  },
+  instagram: {
+    title: 'Latest on Instagram',
+    username: '@framenfreq',
+    profileUrl: 'https://www.instagram.com/framenfreq',
+    cta: {
+      text: 'Follow on Instagram',
+      href: 'https://www.instagram.com/framenfreq'
+    },
+    // NOTE: To update these, right-click on a post on Instagram and "Copy Image Address" for imageUrl.
+    // Copy the post's URL from your browser for postUrl.
+    posts: [
+      { id: 1, postUrl: 'https://www.instagram.com/framenfreq', imageUrl: 'https://via.placeholder.com/300.png/121212/cdaa7c?text=Post+1' },
+      { id: 2, postUrl: 'https://www.instagram.com/framenfreq', imageUrl: 'https://via.placeholder.com/300.png/121212/cdaa7c?text=Post+2' },
+      { id: 3, postUrl: 'https://www.instagram.com/framenfreq', imageUrl: 'https://via.placeholder.com/300.png/121212/cdaa7c?text=Post+3' },
+      { id: 4, postUrl: 'https://www.instagram.com/framenfreq', imageUrl: 'https://via.placeholder.com/300.png/121212/cdaa7c?text=Post+4' },
+      { id: 5, postUrl: 'https://www.instagram.com/framenfreq', imageUrl: 'https://via.placeholder.com/300.png/121212/cdaa7c?text=Post+5' },
+      { id: 6, postUrl: 'https://www.instagram.com/framenfreq', imageUrl: 'https://via.placeholder.com/300.png/121212/cdaa7c?text=Post+6' },
     ]
   },
   contact: {

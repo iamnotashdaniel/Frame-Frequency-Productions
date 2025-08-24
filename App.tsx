@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from './components/Header.tsx';
 import Hero from './components/Hero.tsx';
@@ -7,6 +6,7 @@ import Services from './components/Services.tsx';
 import Portfolio from './components/Portfolio.tsx';
 import Testimonials from './components/Testimonials.tsx';
 import Impact from './components/Impact.tsx';
+import InstagramFeed from './components/InstagramFeed.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
 import ScrollProgressBar from './components/ScrollProgressBar.tsx';
@@ -31,6 +31,7 @@ function App() {
         <Portfolio />
         <Testimonials />
         <Impact />
+        <InstagramFeed />
         <Contact />
       </main>
       <Footer />
