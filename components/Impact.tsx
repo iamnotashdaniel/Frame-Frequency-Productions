@@ -11,32 +11,33 @@ const Counter: React.FC<CounterProps> = ({ target, isVisible }) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        if (isVisible) {
-            let start = 0;
-            const duration = 2000;
-            const increment = target / (duration / 20);
-
-            const timer = setInterval(() => {
-                start += increment;
-                if (start >= target) {
-                    setCount(target);
-                    clearInterval(timer);
-                } else {
-                    setCount(Math.ceil(start));
-                }
-            }, 20);
-
-            return () => clearInterval(timer);
+        if (!isVisible) {
+            return;
         }
+
+        let start = 0;
+        const duration = 2000;
+        const stepTime = 20; // ms
+        const totalSteps = duration / stepTime;
+        const increment = target / totalSteps;
+
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                setCount(target);
+                clearInterval(timer);
+            } else {
+                setCount(Math.ceil(start));
+            }
+        }, stepTime);
+
+        return () => clearInterval(timer);
     }, [isVisible, target]);
 
-    return (
-        <div>
-            <div className="font-display text-6xl text-gold font-bold">{count}</div>
-            <p className="text-text-secondary mt-2">{count === target ? '' : '+'}</p>
-        </div>
-    );
-}
+    // This component now only returns the count, making it a "headless" counter.
+    // The parent component is responsible for styling.
+    return <>{count}</>;
+};
 
 const Impact: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
